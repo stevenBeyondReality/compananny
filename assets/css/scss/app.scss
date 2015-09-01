@@ -26,6 +26,10 @@ h1 {
 	margin: 0 $base-margin;
 	text-align: center;
 	border-bottom: 1px solid $hr-color;
+
+	@include bp-small {
+		
+	}
 }
 
 h2 {
