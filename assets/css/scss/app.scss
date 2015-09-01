@@ -1,0 +1,191 @@
+@import 'base/reset';
+@import 'base/mixins';
+@import 'base/fonts';
+@import 'base/config';
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  	box-sizing: inherit;
+  	transition: all 0.30s ease-in-out;
+}
+
+html, body, input, button {
+	background: $spacer-color;
+	color: $p-color;
+	font-family: 'rotissemisanscnregular', sans-serif;
+	font-size: $p-size;
+	line-height: 1.500em;
+}
+
+h1 {
+	font-size: $h1-size;
+	display: block;
+	padding: $base-padding*1.5;
+	margin: 0 $base-margin;
+	text-align: center;
+	border-bottom: 1px solid $hr-color;
+}
+
+h2 {
+	display: block;
+	font-size: 1.250em;
+	padding: $base-padding $base-padding $base-padding/3 $base-padding;
+}
+
+p {
+	display: block;
+	padding: 0 $base-padding $base-padding*1.5 $base-padding;
+}
+
+a {
+	color: $a-color;
+}
+
+form {
+	padding: $base-padding;
+}
+
+label {
+	display: block;
+	font-size: 16px !important;
+	padding-bottom: $base-padding/3;
+}
+
+input, button, textarea {
+	-appearance: none;
+	background: $input-color;
+	border-radius: 0px !important;
+	border: 0;
+	outline: none;
+	margin: 0;
+	padding: $base-padding;
+	width: 100%;
+}
+
+input:focus {
+	background: $input-active-color;
+}
+
+button {
+	background: $button-color;
+	color: $base-color;
+	cursor: pointer;
+	font-size: $h1-size;
+	margin-top: $base-margin*3/2;
+	padding: $base-padding/3*2;
+}
+
+button:hover {
+	background: $button-hover-color;
+}
+
+img {
+	width: 100%;
+	height: auto;
+
+	&.inline {
+		padding: 0 $base-padding;
+	}
+}
+
+.container {
+	background: $base-color;
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+	width: 100%;
+	max-width: $max-width;
+	margin: 0 auto;
+	position: relative;
+}
+
+#main-header {
+	background: $base-color;
+	position : fixed;
+	width: 100%;
+	max-width: $max-width;
+	top: 0;
+	z-index: 10;
+	height: $main-header-height;
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+}
+
+#logo {
+	float: left;
+	margin: $base-margin;
+	width: 200px;
+}
+
+#info {
+	float: right !important;
+}
+
+#spacer {
+	background: $spacer-color;
+	height: $main-header-height+20;
+}
+
+.form-group {
+	padding-bottom: $base-padding/3*2;
+}
+
+.forgot-password {
+	margin-top: $base-margin;
+	text-align: center;
+}
+
+.icon {
+	padding: $base-padding;
+	position: absolute;
+	right: 0;
+	width: 70px;
+	height: 70px;
+}
+
+.fat {
+	font-family: 'rotissemisanscnbold', sans-serif;
+	font-size: 20px;
+}
+
+.list-item {
+	border-top: $hr-color 1px solid;
+	cursor: pointer;
+	height: 70px;
+	
+	&:hover {
+		background: $link-hover-color;
+	}
+	
+	.icon {
+		left: 0;
+	}
+
+	.content {
+		@include vertical-align;
+		background: url('../img/icon-arrow.svg') no-repeat;
+		background-position: right;
+		background-size: 40px 40px;
+	}
+
+	a {
+		color: $p-color;
+		display: block;
+		padding: 0 50px 0 $base-padding;
+		text-decoration: none;
+		width: 100%;
+	}
+
+	p {
+		margin: 0 0 0 $base-padding;
+		padding: 0;
+	}
+
+	.indented {
+		padding-right: 50px;
+		padding-left: 60px;
+	}
+
+	&:last-child {
+		border-bottom: $hr-color 1px solid;
+	}
+}
